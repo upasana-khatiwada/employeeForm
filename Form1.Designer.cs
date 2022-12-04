@@ -43,6 +43,7 @@
             this.e_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.e_age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.e_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,11 +169,22 @@
             this.e_contact.HeaderText = "e_contact";
             this.e_contact.Name = "e_contact";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(637, 371);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 39);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Edit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.contact1);
@@ -208,5 +220,6 @@
         private DataGridViewTextBoxColumn e_address;
         private DataGridViewTextBoxColumn e_age;
         private DataGridViewTextBoxColumn e_contact;
+        private Button button2;
     }
 }

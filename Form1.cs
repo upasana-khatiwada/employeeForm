@@ -85,16 +85,36 @@ namespace employeeform
             SqlDataAdapter sda = new SqlDataAdapter(SqlCommand);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            int sn = 1;
+            //int sn = 1;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                string employee_name = dt.Rows[i]["name"].ToString();
-                string address = dt.Rows[i]["name"].ToString();
-                string age = dt.Rows[i]["name"].ToString();
-                string contact = dt.Rows[i]["name"].ToString();
-                dataGridView1.Rows.Add(sn++, employee_name, address, age, contact);
+                string employee_name = dt.Rows[i]["e_name"].ToString();
+                string address = dt.Rows[i]["e_address"].ToString();
+                string age = dt.Rows[i]["e_age"].ToString();
+                string contact = dt.Rows[i]["e_contact"].ToString();
+                dataGridView1.Rows.Add( employee_name, address, age, contact);
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow data = dataGridView1.CurrentRow;
+            string emp_name = data.Cells["e_name"].Value.ToString();
+            string emp_address = data.Cells ["e_address"].Value.ToString();
+            string emp_age = data.Cells["e_age"].Value.ToString();
+            string  emp_contact = data.Cells["e_contact"].Value.ToString ();
+
+            name1.Text = emp_name;
+            address1.Text = emp_address;
+            age1.Text = emp_age;
+            contact1.Text = emp_contact;
+
+
+
+        }
+
+        
     }
 }
+  
